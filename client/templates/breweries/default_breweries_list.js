@@ -23,4 +23,4 @@ Template.defaultBreweriesList.events({
 		template.addingABrewery.set(false);
 	}
 
-})
+});

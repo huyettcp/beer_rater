@@ -41,8 +41,6 @@ if (Breweries.find().count() === 0) {
 
 	var rollingRockId = Beers.insert({
 		beer_name: "Rolling Rock",
-		city: "Latrobe",
-		state: "PA",
 		breweryId: latrobeId,
 		type_of_beer: "Pale Lager",
 		abv: "4.4%",

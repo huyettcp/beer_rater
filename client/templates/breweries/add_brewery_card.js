@@ -15,6 +15,9 @@ Template.addBreweryCard.events({
 		Meteor.call('breweryInsert', brewery, function(error, result) {
 			if (error)
 				return alert(error.reason)
+
+			if (result.breweryExists)
+				alert("We already have this brewery");
 		});
 	}
 });

@@ -10,3 +10,6 @@ underscore
 materialize:materialize
 reactive-var
 iron:router
+sacha:spin
+accounts-ui
+accounts-password

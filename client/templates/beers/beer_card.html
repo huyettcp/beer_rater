@@ -1,13 +1,15 @@
-<template name="breweryCard">
+<template name="beerCard">
 
 	    <div class="col s12">
           <div class="card blue-grey lighten-3">
             <div class="card-content blue-grey-text text-darken-4">
-              <span class="card-title blue-grey-text text-darken-4">{{brewery_name}}</span>
+              <span class="card-title blue-grey-text text-darken-4">{{beer_name}}</span>
               <div class="divider"></div>
                 <div class="section">
                 <li>City: {{city}},</li>
-                <li>State {{state}}</li>
+                <li>State: {{state}}</li>
+                <li>Beer ID: {{_id}}</li>
+                <li>Brewery ID: {{breweryId}}</li>
      
               </div>
             </div>

@@ -1,10 +1,5 @@
 if (Breweries.find().count() === 0) {
 
-	// var latrobeId = Breweries.insert({
-	// 	breweryName: "Latrobe Brewing Company",
-	// 	city: "Latrobe",
-	// 	state: "PA"
-	// });
 
 
 	// var pattonId = Meteor.users.insert({
@@ -19,13 +14,13 @@ if (Breweries.find().count() === 0) {
 
 	// var mike = Meteor.users.findOne(mikeId);
 
-	// var latrobeId = Breweries.insert({
-	// 	breweryName: "Latrobe Brewing Company",
-	// 	city: "Latrobe",
-	// 	state: "PA",
-	// 	userId: patton._id,
-	// 	author: patton.profile.name
-	// });
+	var latrobeId = Breweries.insert({
+		brewery_name: "Latrobe Brewing Company",
+		city: "Latrobe",
+		state: "PA",
+		// userId: patton._id,
+		// author: patton.profile.name
+	});
 
 	// var narragansettId = Breweries.insert({
 	// 	brewery_name: "Narragansett",
@@ -44,17 +39,18 @@ if (Breweries.find().count() === 0) {
 
 	// });
 
-	// var rollingRockId = Beers.insert({
-	// 	beer_name: "Rolling Rock",
-	// 	city: "Latrobe",
-	// 	breweryId: latrobeId,
-	// 	type_of_beer: "Pale Lager",
-	// 	abv: "4.4%",
-	// 	userId: mike._id,
-	// 	author: mike.profile.name,
-	// 	ratings: [5, 6]
+	var rollingRockId = Beers.insert({
+		beer_name: "Rolling Rock",
+		city: "Latrobe",
+		state: "PA",
+		breweryId: latrobeId,
+		type_of_beer: "Pale Lager",
+		abv: "4.4%",
+		// userId: mike._id,
+		// author: mike.profile.name,
+		ratings: [5, 6]
 
-	// });
+	});
 
 
 

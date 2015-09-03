@@ -1,0 +1,15 @@
+<template name="header">
+	<div class="navbar-fixed">
+<nav class="top-nav blue-grey darken-4 z-depth-2">
+	<div class="nav-wrapper container">
+
+		<a href="{{pathFor 'defaultBreweriesList'}}" class="brand-logo" id="chippy_brew">Chippy Brew</a>
+	<ul id="nav-mobile dropdown-content" class="right">
+			<li id="beer_selector"><a href="{{pathFor 'defaultBeersList'}}">Beers</a></li>
+		     <li id="brewery_selector" class="active"><a href="{{pathFor 'defaultBreweriesList'}}">Breweries</a></li>
+		<li>{{> loginButtons}}</li>
+	</ul>
+	</div>
+</nav>
+</div>
+</template>

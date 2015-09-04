@@ -1,6 +1,7 @@
 Template.defaultBreweriesList.onCreated(function(){
 	this.addingABrewery = new ReactiveVar(false);
 
+
 });
 
 Template.defaultBreweriesList.helpers({
@@ -9,6 +10,9 @@ Template.defaultBreweriesList.helpers({
   },
   addingABrewery: function(){
   	return Template.instance().addingABrewery.get();
+  },
+  editingABrewery: function(){
+  	return Template.instance().editingABrewery.get();
   }
 });
 
@@ -21,6 +25,8 @@ Template.defaultBreweriesList.events({
 	},
 	'submit form': function(e, template) {
 		template.addingABrewery.set(false);
+
 	}
+
 
 });

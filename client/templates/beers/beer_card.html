@@ -1,4 +1,8 @@
 <template name="beerCard">
+    {{#if editingABeer}}
+      {{> editBeerCard}}
+    {{else}}
+
 
 	    <div class="col s12">
           <div class="card blue-grey lighten-3">
@@ -15,12 +19,11 @@
               </div>
             </div>
             <div class="card-action blue-grey lighten-3">
-                <a href="{{pathFor 'breweryPage'}}" class="blue-grey-text text-darken-4">More Info</a>
-               <a href="{{pathFor 'beersList'}}">Beer List</a>
-              {{#if ownSubmission}}<a class="waves-effect waves-light btn edit blue-grey-text text-darken-4" name="enter_edit">Edit</a>{{/if}}
+              <!-- {{#if ownSubmission}} --><a class="waves-effect waves-light btn edit blue-grey-text text-darken-4" id="enter_edit_beer">Edit</a><!-- {{/if}} -->
   
             </div>
           </div>
         </div>
+      {{/if}}
 
 </template>

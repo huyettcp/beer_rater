@@ -28,7 +28,6 @@ Template.editBreweryCard.events({
 			} else {
 				// Router.go("breweryPage", {_id: currentBreweryId});
 		
-			template.showEditForm.set(false);
 			}
 		});
 

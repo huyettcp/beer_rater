@@ -18,6 +18,11 @@ Template.breweryCard.events({
 	},
 	'click #cancel_edit_brewery': function(e, template) {
 		template.editingABrewery.set(false);
+	},
+	'submit form': function(e, template) {
+		template.editingABrewery.set(false);
+
 	}
+
 
 });

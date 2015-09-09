@@ -1,7 +1,3 @@
-Template.addBreweryCard.onCreated(function() {
-	
-});
-
 Template.addBreweryCard.events({
 	'submit form': function(e, template) {
 		e.preventDefault();

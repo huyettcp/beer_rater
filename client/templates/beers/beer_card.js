@@ -18,5 +18,12 @@ Template.beerCard.helpers({
 Template.beerCard.events({
 	'click #enter_edit_beer': function(e, template) {
 		template.editingABeer.set(true);
+	},
+	'click #cancel_edit_beer': function(e, template) {
+		template.editingABeer.set(false);
+	},
+	'submit form': function(e, template) {
+		template.editingABeer.set(false);
 	}
+
 })

@@ -11,15 +11,17 @@
               <div class="divider"></div>
                 <div class="section">
                 <li>Brewery: {{breweryName}}</li>
-                <li>Type of Beer: {{type_of_beer}},</li>
+                <li>Type of Beer: {{type_of_beer}}</li>
                 <li>ABV: {{abv}}</li>
+                <li>Year Introducted: {{year_introduced}}</li>
                 <li>Beer ID: {{_id}}</li>
                 <li>Brewery ID: {{breweryId}}</li>
      
               </div>
             </div>
             <div class="card-action blue-grey lighten-3">
-              <!-- {{#if ownSubmission}} --><a class="waves-effect waves-light btn edit blue-grey-text text-darken-4" id="enter_edit_beer">Edit</a><!-- {{/if}} -->
+              {{#if ownBeer}}<a class="waves-effect waves-light btn edit blue-grey-text text-darken-4" id="enter_edit_beer">Edit</a>
+              <a class="waves-effect waves-light btn red text-darken" id="delete_beer">Delete</a>{{/if}}
   
             </div>
           </div>

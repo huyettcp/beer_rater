@@ -21,6 +21,16 @@ Template.breweryCard.events({
 	},
 	'submit form': function(e, template) {
 		template.editingABrewery.set(false);
+	},
+
+	'click #delete_brewery': function(e, template) {
+		e.preventDefault();
+
+		if (confirm("Delete this brewery?")) {
+			var currentBreweryId = this._id;
+			Breweries.remove(currentBreweryId);
+		};
+
 
 	}
 

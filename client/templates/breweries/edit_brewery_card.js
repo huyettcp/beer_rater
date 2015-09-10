@@ -1,11 +1,6 @@
-Template.editBreweryCard.onCreated(function(){
-
-
-});
-
 Template.editBreweryCard.events({
 
-	'submit form': function(e, template){
+	'submit form': function(e, template) {
 
 		e.preventDefault();
 
@@ -18,8 +13,6 @@ Template.editBreweryCard.events({
 			state: $(e.target).find('[id=update_state]').val()
 	
 		};
-
-		console.log(breweryProperties)
 
 
 		Breweries.update(currentBreweryId, {$set: breweryProperties}, function(error){

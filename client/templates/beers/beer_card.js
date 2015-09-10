@@ -12,7 +12,10 @@ Template.beerCard.helpers({
 	},
 	editingABeer: function() {
 		return Template.instance().editingABeer.get();
-	}
+	},
+	ownBeer: function() {
+  		return this.userId === Meteor.userId();
+ 	}
 });
 
 Template.beerCard.events({
@@ -24,6 +27,16 @@ Template.beerCard.events({
 	},
 	'submit form': function(e, template) {
 		template.editingABeer.set(false);
+	},
+	'click #delete_beer': function(e, template) {
+		e.preventDefault();
+
+		if (confirm("Delete this beer?")) {
+			var currentBeerId = this._id;
+			Beers.remove(currentBeerId);
+		};
+
+
 	}
 
 })

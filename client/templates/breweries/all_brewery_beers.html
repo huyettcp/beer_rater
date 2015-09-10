@@ -1,0 +1,18 @@
+<template name="allBreweryBeers">
+	   <table>
+        <thead>
+          <tr>
+              <th data-field="beer_name">Beer Name</th>
+              <th data-field="type_of_beer">Type of Beer</th>
+              <th data-field="average_score">Average Score</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        	{{#each beers}}
+        		{{>beerPartial}}
+        	{{/each}}
+        </tbody>
+      </table>
+
+</template>

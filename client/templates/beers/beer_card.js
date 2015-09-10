@@ -15,7 +15,11 @@ Template.beerCard.helpers({
 	},
 	ownBeer: function() {
   		return this.userId === Meteor.userId();
- 	}
+ 	},
+ 	beerReviewCount: function() {
+		return BeerReviews.find({beerId: this._id}).count()
+
+	},
 });
 
 Template.beerCard.events({

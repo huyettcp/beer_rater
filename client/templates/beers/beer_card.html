@@ -16,14 +16,15 @@
                 <li>Year Introducted: {{year_introduced}}</li>
                 <li>Beer ID: {{_id}}</li>
                 <li>Brewery ID: {{breweryId}}</li>
-     
+                <li>Number of Reviews: {{beerReviewCount}}</li>
               </div>
             </div>
             <div class="card-action blue-grey lighten-3">
-              {{#if ownBeer}}<a class="waves-effect waves-light btn edit blue-grey-text text-darken-4" id="enter_edit_beer">Edit</a>
-              <a class="waves-effect waves-light btn red text-darken" id="delete_beer">Delete</a>{{/if}}
-  
+              {{#if currentUser}}<a href="{{pathFor 'beerReviewCard'}}" id="review_beer">Review</a>{{/if}}
+              {{#if ownBeer}}<a href="#" id="enter_edit_beer">Edit</a>
+              <a href="#" class="waves-effect waves-light btn red" id="delete_beer">Delete</a>{{/if}}
             </div>
+
           </div>
         </div>
       {{/if}}

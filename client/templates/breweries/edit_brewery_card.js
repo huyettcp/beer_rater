@@ -1,6 +1,6 @@
 Template.editBreweryCard.events({
 
-	'submit form': function(e, template) {
+	'submit form[name="edit_brewery_form"]': function(e, template) {
 
 		e.preventDefault();
 

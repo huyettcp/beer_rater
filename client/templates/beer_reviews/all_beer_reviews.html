@@ -1,0 +1,41 @@
+<template name="allBeerReviews">
+
+<div class="row">
+<div class="col s12">
+
+	<div class="col s5">
+		<h4 class="review_header">{{beer_name}}</h4>
+	</div>
+<div class="divider col s12"></div>
+	<div class="section">
+
+		<div class="col s6">
+			<p><b>Brewed by</b> {{brewery.brewery_name}}<br>
+			{{brewery.city}}, {{brewery.state}}<br>
+			<b>Style of Beer:</b> {{type_of_beer}}<br>
+			<b>ABV:</b> {{abv}}</p>
+		</div>
+		<div class="col s6">
+		<div>
+			<p><b>Average Review Score:</b> {{averageReviewScore}}<br>
+			<b>Number of Reviews:</b> {{beerReviewCount}}<br>
+			<b>Date Added:</b> {{cleanDate}}<br>
+		</p>
+
+		</div>
+
+	</div>
+	</div>
+	<div class="divider col s12"></div>
+	{{#each beerReviews}}
+		{{>beerReviewLi}}
+
+	{{/each}}
+</div>
+
+</div>
+
+
+
+
+</template>

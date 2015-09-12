@@ -5,7 +5,7 @@ Template.defaultBeersList.onCreated(function(){
 
 Template.defaultBeersList.helpers({
   beers: function() {
-    return Beers.find();
+    return Beers.find({}, {sort: {submitted: -1}});
   },
   addingABeer: function(){
   	return Template.instance().addingABeer.get()

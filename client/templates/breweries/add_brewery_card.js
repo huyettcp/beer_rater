@@ -1,5 +1,5 @@
 Template.addBreweryCard.events({
-	'submit form': function(e, template) {
+	'submit form[name="add_brewery_form"]': function(e, template) {
 		e.preventDefault();
 		var brewery = {
 			brewery_name: $(e.target).find('[id=brewery_name]').val(),

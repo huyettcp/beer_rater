@@ -5,22 +5,22 @@
 
 
 	    <div class="col s12">
-          <div class="card blue-grey lighten-3">
-            <div class="card-content blue-grey-text text-darken-4">
-              <span class="card-title blue-grey-text text-darken-4">{{beer_name}}</span>
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title"><h5>{{beer_name}}</h5></span>
               <div class="divider"></div>
                 <div class="section">
-                <li>Brewery: {{breweryName}}</li>
-                <li>Type of Beer: {{type_of_beer}}</li>
-                <li>ABV: {{abv}}</li>
-                <li>Year Introducted: {{year_introduced}}</li>
-                <li>Beer ID: {{_id}}</li>
-                <li>Brewery ID: {{breweryId}}</li>
-                <li>Number of Reviews: {{beerReviewCount}}</li>
-                <li>Average Review Score: {{averageReviewScore}}</li>
+                <p>
+                  <b>Brewery:</b> {{breweryName}}<br>
+                  <b>Type of Beer:</b> {{type_of_beer}}<br>
+                  <b>ABV:</b> {{abv}}<br>
+                  <b>Year Introducted:</b> {{year_introduced}}<br>
+                  <b>Number of Reviews:</b> {{beerReviewCount}}<br>
+                  <b>Average Review Score:</b> {{averageReviewScore}}
+                </p>
               </div>
             </div>
-            <div class="card-action blue-grey lighten-3">
+            <div class="card-action ">
               <a href="{{pathFor 'allBeerReviews'}}" id="all_beer_reviews">View All Reviews</a>
               {{#if currentUser}}<a href="{{pathFor 'beerReviewCard'}}" id="review_beer">Review</a>{{/if}}
               {{#if ownBeer}}<a href="#" id="enter_edit_beer">Edit</a>

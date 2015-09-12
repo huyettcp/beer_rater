@@ -22,3 +22,8 @@ h4, b, h5 {
 #create_beer_button {
 	background-color: #546e7a
 }
+
+
+#delete_beer, #enter_edit_beer, #all_beer_reviews, #review_beer {
+	color: white
+}

@@ -12,14 +12,14 @@
 }
 
 body {
-	background-color: #eeeeee
+	background-color: #eceff1
 }
 
 h4, b, h5 {
 	color: #546e7a
 }
 
-#create_beer_button {
+.create_big_button {
 	background-color: #546e7a
 }
 
@@ -27,3 +27,47 @@ h4, b, h5 {
 #delete_beer, #enter_edit_beer, #all_beer_reviews, #review_beer {
 	color: #546e7a
 }
+
+.plus_icon {
+	color: #fafafa;
+}
+
+.sort_buttons { 
+	vertical-align: bottom;
+}
+
+.filter_dropdown {
+	margin-top: 2%;
+
+}
+
+.filter_button {
+	background-color: #263238
+}
+
+.beer_card {
+	color: #fafafa;
+}
+
+.header_text {
+	color: #fafafa;
+}
+
+.brewery_card {
+	background-color: #fafafa;
+}
+
+.list_title {
+	color: #263238
+}
+
+
+
+
+
+
+
+
+
+
+

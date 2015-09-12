@@ -7,17 +7,38 @@
 
 		{{else}}
 		 {{#if currentUser}}
-		 <div class="col s12 waves-effect waves-light">
-          <div class="card light-blue darken-3 waves-effect col s12 hoverable">
-            <div class="card-content white-text" id="create_brewery">
-              <span class="card-title">Add Brewery</span>
+		 <div class="col s12 waves-effect waves-light ">
+          <div class="card create_big_button col s12 hoverable create_big_button grey-text text-lighten-5">
+            <div class="card-content grey-text text-lighten-5" id="create_brewery">
+              <span class="card-title grey-text text-lighten-5">Add Brewery</span>
+                 <ul class="right">
+        			<li><a href="#"><i class="material-icons plus_icon">add</i></a></li>
+      			</ul>
             </div>
           </div>
         </div>
         {{/if}}
         {{/if}}
-        <div class="col s3 offset-s9">
-			<a class="waves-effect waves-light btn" style="float: right;"><i class="material-icons left">sort_by_alpha</i>Sort A-Z</a>
+
+        <div class="row">
+			<div class="col s12">
+				<div class="col s6">
+					<h4 class="list_title">Brewery List</h4>
+				</div>
+				<div class="col s6 filter_dropdown">
+					  <a class='dropdown-button btn right filter_button' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+  <!-- Dropdown Structure -->
+  						<ul id='dropdown1' class='dropdown-content '>
+    						<li><a href="#!">one</a></li>
+    						<li><a href="#!">two</a></li>
+   	 						<li class="divider"></li>
+    						<li><a href="#!">three</a></li>
+  						</ul>
+
+		<!-- 			<a class="waves-effect waves-light btn-large" style="float: right;"><i class="material-icons left">sort_by_alpha</i>Sort A-Z</a> -->
+				</div>
+			</div>
 		</div>
 	<div class="wrapper">
 		{{#each breweries}}

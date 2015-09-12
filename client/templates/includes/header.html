@@ -3,18 +3,18 @@
 <nav class="top-nav blue-grey darken-4 z-depth-2">
 	<div class="nav-wrapper container">
 
-		<a href="{{pathFor 'home'}}" class="brand-logo" id="chippy_brew">Chippy Brew</a>
-	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		<a href="{{pathFor 'home'}}" class="brand-logo header_text grey-text text-lighten-5" id="chippy_brew">Chippy Brew</a>
+	<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons header_text">menu</i></a>
       <ul class="right hide-on-med-and-down">
-			<li id="beer_selector"><a href="{{pathFor 'defaultBeersList'}}">Beers</a></li>
-		     <li id="brewery_selector" class="active"><a href="{{pathFor 'home'}}">Breweries</a></li>
+			<li id="beer_selector"><a href="{{pathFor 'defaultBeersList'}}" class="header_text">Beers</a></li>
+		     <li id="brewery_selector" class="active header_text"><a href="{{pathFor 'home'}}">Breweries</a></li>
 		<li>{{> loginButtons}}</li>
 	</ul>
 	    <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a class="header_text" href="sass.html">Sass</a></li>
+        <li><a class="header_text" href="badges.html">Components</a></li>
+        <li><a class="header_text" href="collapsible.html">Javascript</a></li>
+        <li><a class="header_text" href="mobile.html">Mobile</a></li>
         <li>{{> loginButtons}}</li>
       </ul>
 

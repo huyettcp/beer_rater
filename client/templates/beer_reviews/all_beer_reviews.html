@@ -1,12 +1,13 @@
 <template name="allBeerReviews">
 
-<div class="row">
-<div class="col s12">
+<div class="row card-panel">
 
-	<div class="col s5">
+<div class="col s12 ">
+
 		<h4 class="review_header">{{beer_name}}</h4>
-	</div>
-<div class="divider col s12"></div>
+</div>
+			<div class="divider col s12"></div>
+
 	<div class="section">
 
 		<div class="col s6">
@@ -24,18 +25,26 @@
 
 		</div>
 
+</div>
+</div>
+</div>
+
+
+<div class="row">
+	<div class="col s12">
+		<div class="col s12">
+			<h4>Reviews</h4>
+		</div>
 	</div>
-	</div>
-	<div class="divider col s12"></div>
+</div>
+
+
+<div class="row card-panel">
+
 	{{#each beerReviews}}
 		{{>beerReviewLi}}
 
 	{{/each}}
-</div>
 
 </div>
-
-
-
-
 </template>

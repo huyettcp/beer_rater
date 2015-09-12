@@ -1,23 +1,29 @@
 <template name="defaultBreweriesList">
 	<div class="breweries">
 	<div class="row">
+
 		{{#if addingABrewery}}
 			{{> addBreweryCard}}
 
 		{{else}}
-
-		 {{#if currentUser}}<div class="col s12 waves-effect waves-light">
-          <div class="card light-blue darken-3 waves-effect col s12 ">
+		 {{#if currentUser}}
+		 <div class="col s12 waves-effect waves-light">
+          <div class="card light-blue darken-3 waves-effect col s12 hoverable">
             <div class="card-content white-text" id="create_brewery">
               <span class="card-title">Add Brewery</span>
             </div>
           </div>
-        </div>{{/if}}
+        </div>
         {{/if}}
-
+        {{/if}}
+        <div class="col s3 offset-s9">
+			<a class="waves-effect waves-light btn" style="float: right;"><i class="material-icons left">sort_by_alpha</i>Sort A-Z</a>
+		</div>
+	<div class="wrapper">
 		{{#each breweries}}
 			{{> breweryCard}}
 		{{/each}}
+	</div>
 
 	</div>
 	    </div>

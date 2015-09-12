@@ -1,3 +1,11 @@
+Template.defaultBreweriesList.onRendered(function () {
+  this.find('.wrapper')._uihooks = {
+    moveElement: function (node, next) {
+      // do nothing for now
+    }
+  }
+});
+
 Template.defaultBreweriesList.onCreated(function(){
 	this.addingABrewery = new ReactiveVar(false);
 

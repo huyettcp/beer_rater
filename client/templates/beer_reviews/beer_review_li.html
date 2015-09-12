@@ -1,8 +1,11 @@
 <template name="beerReviewLi">
-		<div class="section">
+
+			<div class="col s12">
+			<h5>{{beer_review_title}}</h5>
+			</div>
+			<div class="divider col s12"></div>
 			<div class="col s6">
 				<p>
-					<h5>{{beer_review_title}}</h5>
 				<b>by</b> {{author}}<br>
 				<b>Date Reviewed:</b> {{cleanDate}}<br>
 				</p>
@@ -16,11 +19,12 @@
 
 				</p>
 			</div>
+
 			<div class="col s12">
 				<p>
 					{{body}}
 				</p>
 			</div>
-		</div>
-				<div class="divider col s12"></div>
+
+	
 </template>

@@ -15,9 +15,23 @@
       			</ul>
             </div>
           </div>
-        </div>{{/if}}
+        </div>{{/if}}{{/if}}
 
-		{{/if}}
+        <div class="row">
+			<div class="col s12">
+				<div class="col s6">
+					<h4 class="list_title">Beer List</h4>
+				</div>
+    <div class="col s6 right beer_sort_tab ">
+      <ul class="tabs z-depth-1">
+        <li class="tab col s3"><a class="active" href="#" id="beer_sort_alpha">A-Z</a></li>
+        <li class="tab col s3 custom_tabs"><a href="#" class="custom_tabs" id="beer_sort_rated">Rating</a></li>
+  		<li class="tab col s3 custom_tabs"><a href="#" class="custom_tabs" id="beer_sort_submitted">Submitted</a></li>
+      </ul>
+  </div>
+			</div>
+		</div>
+
 
 		{{#each beers}}
 			{{> beerCard}}

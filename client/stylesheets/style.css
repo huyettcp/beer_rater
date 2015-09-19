@@ -53,7 +53,7 @@ h4, b, h5, p {
 	color: #fafafa;
 }
 
-.brewery_card {
+.brewery_card, .beer_card {
 	background-color: #fafafa;
 }
 
@@ -65,7 +65,7 @@ h4, b, h5, p {
 	color: #263238;
 }
 
-.brewery_sort_tab {
+.brewery_sort_tab, .beer_sort_tab {
 	margin-top: 1%;
 }
 
@@ -78,11 +78,11 @@ h4, b, h5, p {
 }
 
 
-#brewery_sort_alpha {
+#brewery_sort_alpha, #beer_sort_alpha {
 	color: #263238
 }
 
-#brewery_sort_submitted {
+#brewery_sort_submitted, #beer_sort_submitted, #beer_sort_rated {
 	color: #263238
 }
 

@@ -1,3 +1,11 @@
+Template.defaultBeersList.onRendered(function () {
+  $(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+        
+});
+
+
 Template.defaultBeersList.onCreated(function(){
 	this.addingABeer = new ReactiveVar(false);
 	this.editingABeer = new ReactiveVar(false);

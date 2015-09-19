@@ -48,7 +48,7 @@ if (Breweries.find().count() === 0) {
 		abv: "4.4%",
 		userId: mike._id,
 		author: mike.profile.name,
-		ratings: [5, 6]
+		ratings: [3]
 
 	});
 
@@ -60,7 +60,10 @@ if (Breweries.find().count() === 0) {
 		author: patton.profile.name,
 		beer_review_title: "It's ok.",
 		body: "Poured from a can. Pale yellow with a thick white head and minor legs. Faint malt aroma, not much. Taste has a lot of sweetness from the malt. Their is a faint bitterness but no hop tones. Very distinct and unpleasant metallic aftertaste. Very good texture and mouthfeel. Overall not very appealing. ",
-		rating: 3
+		rating: 3,
+		aroma: 2,
+		appearance: 4,
+		taste: 4
 
 	});
 

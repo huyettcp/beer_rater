@@ -1,15 +1,16 @@
 <template name="beerReviewCard">
+  <div class="row">
 	<form class="col s12">
         <div class="card blue-grey darken-1">
-        <div class="col s12 card-content white-text">
-        <h6 class="col s12 cancel_add_brew">Add Review for {{beer_name}}</h6>
+        <div class="col s12 card-content grey-text text-lighten-5">
+        <h6 class="col s12"><b>Add Review for {{beer_name}}</b></h6>
         <div class="input-field col s12">
           <label for="beer_review_title">Title</label>
-          <input id="beer_review_title" type="text" class="validate">
+          <input id="beer_review_title" type="text" class="validate" style="text-transform: capitalize">
         </div>
-        <div class="input-field col s5">
-          <select class="browser-default" name="beer_rating">
-            <option value="" disabled selected>Choose your rating</option>
+        <div class="input-field col s12">
+          <select class="browser-default dropdown_text_color" name="beer_rating">
+            <option value="" disabled selected>Overall Rating</option>
             <option value="1">1 Star</option>
             <option value="2">2 Stars</option>
             <option value="3">3 Stars</option>
@@ -18,17 +19,50 @@
           </select>
         </div>
         <div class="input-field col s12">
-          <textarea id="review_text_area" class="materialize-textarea"></textarea>
-          <label for="review_text_area">Enter your review</label>
+          <select class="browser-default dropdown_text_color" name="aroma_rating">
+            <option value="" disabled selected>Aroma</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+          </select>
+        </div>
+        <div class="input-field col s12">
+          <select class="browser-default dropdown_text_color" name="appearance_rating">
+            <option value="" disabled selected>Appearance</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+          </select>
+        </div>
+        <div class="input-field col s12">
+          <select class="browser-default dropdown_text_color" name="taste_rating">
+            <option value="" disabled selected>Taste</option>
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+          </select>
+        </div>
+        <div class="input-field col s12">
+           <label for="review_text_area">Enter your review</label>
+          <textarea id="review_text_area" class="materialize-textarea validate" type="text" input ></textarea>
+
         </div>
         <div class="col s12">
-        <input type="submit" value="Submit" class="btn btn-primary" id="review_submit"/>
-        <a class="waves-effect waves-light btn" id="cancel_add_review">Cancel</a>
+        <input type="submit" value="Submit" class="btn btn-primary blue-grey darken-4 create_and_edit_form_button waves-effect waves-light" id="review_submit"/>
+        <a class="btn btn-primary blue-grey darken-4 create_and_edit_form_button waves-effect waves-light" id="cancel_add_review">Cancel</a>
         </div>
       </div>
       </div>
 
     </form>
+  </div>
+
 
 </template>
 

@@ -20,9 +20,9 @@
               </div>
             </div>
             <div class="card-action">
-                {{#if currentUser}}<a href="{{pathFor 'allBeerReviews'}}" id="all_beer_reviews" class="list_title blue-grey-text text-darken-4">Reviews</a>{{/if}}
-              {{#if ownBeer}}<a class="waves-effect waves-light btn edit grey-text text-lighten-5 blue-grey darken-4" id="enter_edit_beer">Edit</a>{{/if}}
-
+                <a href="{{pathFor 'allBeerReviews'}}" id="all_beer_reviews" class="list_title blue-grey-text text-darken-4">All Reviews</a>
+                {{#if ownBeer}}<a class="waves-effect waves-light btn edit grey-text text-lighten-5 blue-grey darken-4" id="enter_edit_beer">Edit Beer</a>{{/if}}
+                {{#if currentUser}}<a href="{{pathFor 'beerReviewCard'}}" class="waves-effect waves-light btn edit grey-text text-lighten-5 blue-grey darken-4" >Review Beer</a>{{/if}}
   
             </div>
           </div>

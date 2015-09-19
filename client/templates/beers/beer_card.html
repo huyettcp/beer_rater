@@ -4,7 +4,7 @@
     {{else}}
 
 
-	    <div class="col s6 ">
+	    <div class="col s12 content_card">
           <div class="card beer_card">
             <div class="card-content">
               <span class="card-title"><h5>{{beer_name}}</h5></span>
@@ -20,13 +20,11 @@
               </div>
             </div>
             <div class="card-action">
-              <a href="{{pathFor 'allBeerReviews'}}" id="all_beer_reviews" class="waves-effect btn-flat">All Reviews</a>
+                {{#if currentUser}}<a href="{{pathFor 'allBeerReviews'}}" id="all_beer_reviews" class="list_title blue-grey-text text-darken-4">Reviews</a>{{/if}}
+              {{#if ownBeer}}<a class="waves-effect waves-light btn edit grey-text text-lighten-5 blue-grey darken-4" id="enter_edit_beer">Edit</a>{{/if}}
 
-              {{#if currentUser}}<a href="{{pathFor 'beerReviewCard'}}" id="review_beer" class="waves-effect waves-light btn blue-grey darken-1 co">Add Review</a>{{/if}}
-              {{#if ownBeer}}<a href="#" id="enter_edit_beer" class="waves-effect waves-light btn blue-grey darken-1 col l2 m2 s1">Edit</a>
-              <a href="#" class="waves-effect waves-light btn red accent-4 co" id="delete_beer">Delete</a>{{/if}}
+  
             </div>
-
           </div>
         </div>
       {{/if}}

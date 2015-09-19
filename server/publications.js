@@ -10,8 +10,21 @@ Meteor.publish('singleBrewery', function(id) {
 	return Breweries.find(id);
 });
 
-Meteor.publish('beers', function(){
-	return Beers.find();
+Meteor.publish('beers', function(options){
+	check(options, {
+		sort: Object
+	})
+	return Beers.find({}, options);
+});
+
+Meteor.publish('beer_breweries_list', function() {
+	return Breweries.find();
+});
+
+
+Meteor.publish('singleBeer', function(id) {
+	check(id, String)
+	return Beers.find(id);
 });
 
 Meteor.publish('beer_reviews', function(){

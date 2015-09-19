@@ -9,6 +9,9 @@ Template.breweryCard.helpers({
   },
   ownBrewery: function() {
   	return this.userId === Meteor.userId();
+  },
+  beerCount: function() {
+    return Beers.find({breweryId: this._id}).count()
   }
 });
 

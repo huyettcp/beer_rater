@@ -65,7 +65,26 @@ h4, b, h5 {
 	color: #263238;
 }
 
+.brewery_sort_tab {
+	margin-top: 1%;
+}
 
+.tabs {
+	color: #fafafa;
+}
+
+.tab a {
+	color: #fafafa;
+}
+
+
+#brewery_sort_alpha {
+	color: #263238
+}
+
+#brewery_sort_submitted {
+	color: #263238
+}
 
 
 

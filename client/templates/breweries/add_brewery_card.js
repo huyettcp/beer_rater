@@ -24,5 +24,6 @@ Template.addBreweryCard.events({
 			if (result.breweryExists)
 				alert("We already have this brewery");
 		});
+		// Router.go('recentlyAddedBreweries')
 	}
 });

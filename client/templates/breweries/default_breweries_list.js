@@ -1,9 +1,8 @@
 Template.defaultBreweriesList.onRendered(function () {
-  this.find('.wrapper')._uihooks = {
-    moveElement: function (node, next) {
-      // do nothing for now
-    }
-  }
+  $(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+        
 });
 
 Template.defaultBreweriesList.onCreated(function(){
@@ -22,6 +21,7 @@ Template.defaultBreweriesList.helpers({
   editingABrewery: function(){
   	return Template.instance().editingABrewery.get();
   }
+
 });
 
 Template.defaultBreweriesList.events({
@@ -34,7 +34,14 @@ Template.defaultBreweriesList.events({
 	'submit form': function(e, template) {
 		template.addingABrewery.set(false);
 
-	}
+	},
+  'click #brewery_sort_submitted':function() {
+    Router.go('recentlyAddedBreweries')
+
+  },
+  'click #brewery_sort_alpha':function() {
+    Router.go('home')
+  }
 
 
 });

@@ -12,9 +12,7 @@ Template.defaultBeersList.onCreated(function(){
 });
 
 Template.defaultBeersList.helpers({
-  beers: function() {
-    return Beers.find({}, {sort: {submitted: -1}});
-  },
+
   addingABeer: function(){
   	return Template.instance().addingABeer.get()
   },
@@ -33,6 +31,14 @@ Template.defaultBeersList.events({
 	'submit form': function(e, template) {
 		template.addingABeer.set(false);
 		template.editingABeer.set(false);
-	}
+	},
+	'click #beer_sort_alpha':function() {
+    	Router.go('defaultBeersList')
+    },
+    'click #beer_sort_submitted':function() {
+    	Router.go('newBeersList')
+
+  }
+
 
 })

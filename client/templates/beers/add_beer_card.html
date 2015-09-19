@@ -1,16 +1,16 @@
 <template name="addBeerCard">
 	<form class="col s12">
-      <div class="card">
-        <div class="col s12 card-content ">
-        <h5 class="col s12 cancel_add_brew">Add Beer</h5>
+      <div class="card blue-grey darken-1">
+        <div class="col s12 card-content card-content grey-text text-lighten-5">
+        <h6 class="col s12"><b>Add Beer</b></h6>
         <div class="input-field col s12">
           <label for="beer_name">Name of Beer</label>
-          <input id="beer_name" type="text" class="validate">
+          <input id="beer_name" type="text" class="validate" style="text-transform: capitalize">
         </div>
 
         <div class="input-field col s6">
           <label for="type_of_beer">Type of Beer</label>
-          <input id="type_of_beer" type="text" class="validate">
+          <input id="type_of_beer" type="text" class="validate" style="text-transform: capitalize">
         </div>
 
         <div class="input-field col s6">
@@ -19,12 +19,12 @@
         </div>
         <div class="input-field col s6">
           <label for="year_introduced">Year Introduced</label>
-          <input id="year_introduced" type="text" class="validate">
+          <input id="year_introduced" type="text" class="validate" style="text-transform: capitalize">
         </div>
         <div class="input-field col s6">
 <!--         	<label>Brewery Select</label> -->
-    		<select class="browser-default" name="brewery_id_dropdown">
-    			<option value="" disabled selected>Brewery Select</option>
+    		<select class="browser-default dropdown_text_color" name="brewery_id_dropdown">
+    			<option value="" disabled selected><h6 id="cool">Brewery Select</h6></option>
     			{{#each breweries}}
     				{{>addBeerBreweryDropdown}}
     			{{/each}}
@@ -32,8 +32,8 @@
 
         </div>
         <div class="col s12">
-        <input type="submit" value="Submit" class="btn btn-primary"/>
-        <a class="waves-effect waves-light btn" id="cancel_add_beer">Cancel</a>
+        <input type="submit" value="Submit" class="btn btn-primary blue-grey darken-4 create_and_edit_form_button "/>
+        <a class="btn btn-primary blue-grey darken-4 create_and_edit_form_button" id="cancel_add_beer">Cancel</a>
         </div>
         </div>
       </div>

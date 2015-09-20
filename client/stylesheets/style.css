@@ -63,7 +63,7 @@ h4, h5, p {
 
 
 .brewery_sort_tab, .beer_sort_tab {
-	margin-top: 1%;
+	margin-top: .500rem;
 }
 
 .tabs {
@@ -124,6 +124,13 @@ h4, h5, p {
 .top {
 	margin-top: 4%
 }
+
+#beer_page_review_button {
+	margin-top: 1.14rem;
+}
+
+
+
 
 
 

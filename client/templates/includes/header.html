@@ -1,30 +1,41 @@
 <template name="header">
-	<div class="navbar-fixed">
-<nav class="top-nav blue-grey darken-4 z-depth-2">
-	<div class="nav-wrapper container">
 
-		<a href="{{pathFor 'home'}}" class="brand-logo right header_text grey-text text-lighten-5" id="chippy_brew">Chippy Brew</a>
-	<a href="#" class="button-collapse"><i class="material-icons header_text">menu</i></a>
-      <ul class="left hide-on-med-and-down">
-			<li id="beer_selector"><a href="{{pathFor 'defaultBeersList'}}" class="header_text">Beers</a></li>
-		     <li id="brewery_selector" class="active header_text"><a href="{{pathFor 'home'}}">Breweries</a></li>
-		<li>{{> loginButtons}}</li>
-	</ul>
-	    <ul class="side-nav" id="mobile-demo">
-        <li><a class="header_text" href="sass.html">Sass</a></li>
-        <li><a class="header_text" href="badges.html">Components</a></li>
-        <li><a class="header_text" href="collapsible.html">Javascript</a></li>
-        <li><a class="header_text" href="mobile.html">Mobile</a></li>
-        <li>{{> loginButtons}}</li>
+<div class="navbar-fixed">
+
+<nav class="top-nav blue-grey darken-4 z-depth-2">
+  <div class="nav-wrapper container">
+
+<!--     <a href="#!" class="brand-logo left">Chippy Brew</a>
+    <ul class="right hide-on-med-and-down">
+      <li id="beer_selector"><a class=
+      	"header_link" id="beer_header" href="{{pathFor 'defaultBeersList'}}">Beers</a></li>
+
+      <li class="active highlight" id="brewery_selector"><a href="{{pathFor 'home'}}" class="header_link">Breweries</a></li>
+      <li>{{> loginButtons}}</li>
+    </ul> -->
+    <div class="row">
+    <a href="#!" class="brand-logo center hide-on-med-and-down">Chippy Brew</a>
+    <ul class="left">
+  		<li>{{> loginButtons}}</li>
+  	</ul>
+  	<div class="col s6 m4 right beer_sort_tab ">
+  
+       <ul class="tabs top-nav blue-grey darken-4 grey-text text-lighten-5">
+        <li class="tab col s3 m2"><a class="grey-text text-lighten-5" href="#" id="beer_header_toggle">Beers</a></li>
+  		<li class="tab col s3 m2 custom_tabs"><a href="#" class="ctivecustom_tabs active grey-text text-lighten-5" id="brewery_header_toggle">Breweries</a></li>
       </ul>
 
-
-	</div>
+ 	</div>
+ 	</div>
+  </div>
+ 
 
 
 </nav>
+        
 
 </div>
+
 
  
 </template>

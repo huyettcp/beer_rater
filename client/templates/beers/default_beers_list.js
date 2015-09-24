@@ -1,7 +1,9 @@
 Template.defaultBeersList.onRendered(function () {
   $(document).ready(function(){
     $('ul.tabs').tabs();
+  
   });
+
         
 });
 
@@ -9,6 +11,7 @@ Template.defaultBeersList.onRendered(function () {
 Template.defaultBeersList.onCreated(function(){
 	this.addingABeer = new ReactiveVar(false);
 	this.editingABeer = new ReactiveVar(false);
+
 });
 
 Template.defaultBeersList.helpers({
@@ -35,7 +38,7 @@ Template.defaultBeersList.events({
 	'click #beer_sort_alpha':function() {
     	Router.go('defaultBeersList')
     },
-    'click #beer_sort_submitted':function() {
+ 'click #beer_sort_submitted':function() {
     	Router.go('newBeersList')
 
   }

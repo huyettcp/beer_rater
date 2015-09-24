@@ -28,21 +28,11 @@ Template.header.helpers({
 	brewery_active_header: function() { 
 		var route = Router.current().route.getName()
 		console.log(route)
-		if (route === 'defaultBeersList' || 'beerReviewCard' || 'allBeerReviews'){
-			return '' ;
+		if (route === 'home' || route === 'allBreweryBeers'){
+			return 'active' ;
 		}	else  {
-			return 'active';
+
 		}
 	}
-
-	// onHomepage: function() {
-	// var route = Router.current().route.getName()
-	// 	if (route === "fullBeerList"){
-	// 		return true;
-	// 	} else {
-	// 		return false;
-	// 	}
-		
-	// }
 
 });

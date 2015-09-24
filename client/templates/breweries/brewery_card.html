@@ -2,7 +2,7 @@
     {{#if editingABrewery}}
         {{> editBreweryCard}}
     {{else}}
-	    <div class="col s6 content_card">
+	    <div class="col l6 m12 s12 content_card">
           <div class="card brewery_card">
             <div class="card-content">
               <span class="card-title"><h5>{{brewery_name}}</h5></span>
@@ -18,7 +18,7 @@
 
                 <a href="{{pathFor 'allBreweryBeers'}}" class="list_title blue-grey-text text-darken-4">Beers ({{beerCount}} Beers)</a>
 
-              {{#if ownBrewery}}<a class="list_title blue-grey-text text-darken-4">Edit</a>
+              {{#if ownBrewery}}<a href="#" class="list_title blue-grey-text text-darken-4" id="enter_edit_brewery">Edit</a>
               {{/if}}
   
             </div>

@@ -1,7 +1,9 @@
 <template name="beerPartial">
 	      <tr>
-            <td>{{beer_name}}</td>
+            <td><a href="{{pathFor 'beerReviewCard'}}">{{beer_name}}</a></td>
             <td>{{type_of_beer}}</td>
+            <td>{{abv}}%</td>
             <td>{{averageReviewScore}}</td>
+            <td><a href="{{pathFor 'beerReviewCard'}}" class="jump_to_review">Review</a></td>
           </tr>
 </template>

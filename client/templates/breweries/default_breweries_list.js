@@ -12,9 +12,9 @@ Template.defaultBreweriesList.onCreated(function(){
 });
 
 Template.defaultBreweriesList.helpers({
-  // breweries: function(){
-  //   return Breweries.find({}, {sort: {submitted: -1}});
-  // },
+  breweries: function(){
+    return Breweries.find({}, {sort: {submitted: -1}});
+  },
   addingABrewery: function(){
   	return Template.instance().addingABrewery.get();
   },

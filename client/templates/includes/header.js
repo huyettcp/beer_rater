@@ -28,7 +28,7 @@ Template.header.helpers({
 	brewery_active_header: function() { 
 		var route = Router.current().route.getName()
 		console.log(route)
-		if (route === 'home' || route === 'allBreweryBeers'){
+		if (route === 'home' || route === 'allBreweryBeers' || route === 'recentlyAddedBreweries'){
 			return 'active' ;
 		}	else  {
 

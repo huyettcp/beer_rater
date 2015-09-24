@@ -12,9 +12,6 @@ Template.defaultBreweriesList.onCreated(function(){
 });
 
 Template.defaultBreweriesList.helpers({
-  breweries: function(){
-    return Breweries.find({}, {sort: {submitted: -1}});
-  },
   addingABrewery: function(){
   	return Template.instance().addingABrewery.get();
   },
@@ -35,12 +32,14 @@ Template.defaultBreweriesList.events({
 		template.addingABrewery.set(false);
 
 	},
-  'click #brewery_sort_submitted':function() {
+  'click #brewery_sort_submitted': function() {
     Router.go('recentlyAddedBreweries')
+    console.log("works")
 
   },
-  'click #brewery_sort_alpha':function() {
+  'click #brewery_sort_alpha': function() {
     Router.go('home')
+       console.log("workbs")
   }
 
 

@@ -1,10 +1,23 @@
+Template.beerReviewCard.rendered = function() {
+	var context = Session.get('formContext')
+
+};
+
 Template.beerReviewCard.helpers({
 
 });
 
 Template.beerReviewCard.events({
 	'click #cancel_add_review': function() {
-		Router.go("defaultBeersList")
+		var context = Session.get('formContext')
+
+		if (context == "allBreweryBeers"){
+			Router.go('recentlyAddedBreweries')
+		} else {
+			Router.go("defaultBeersList")
+		}
+
+			
 	},
 
 	'submit form': function(e, template){

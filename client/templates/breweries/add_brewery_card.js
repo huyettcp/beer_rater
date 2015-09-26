@@ -19,11 +19,18 @@ Template.addBreweryCard.events({
 		
 		Meteor.call('breweryInsert', brewery, function(error, result) {
 			if (error)
-				return alert(error.reason)
+		
+				return throwError(error.reason);
+
+			if (result.emptyBreweryName)
+				throwError('You must enter a Brewery Name')
 
 			if (result.breweryExists)
-				alert("We already have this brewery");
+				throwError('This link has already been posted');
 				Router.go('allBreweryBeers', {_id: result._id})
+
+
+
 
 
 		});

@@ -1,9 +1,21 @@
-Template.addBeerCard.helpers({
-	breweries: function() {
-		return Breweries.find();
-	}
+Template.addBeerCard.rendered = function () {
 
-});
+	Session.get('formContext', 'allBreweryBeers')
+
+
+};
+
+Template.addBeerCard.helpers({
+	onBreweryBeerList: function(){
+	var context = Session.get('formContext')
+
+	if (context == "allBreweryBeers"){
+		return true
+	} else {
+		return false
+	}
+}
+})
 
 Template.addBeerCard.events({
 	'submit form': function(e, template) {
@@ -35,7 +47,6 @@ Template.addBeerCard.events({
 			if (result.beerExists)
 				alert("We already have this beer")
 		});
-
 		Router.go('newBeersList')
 
 	}

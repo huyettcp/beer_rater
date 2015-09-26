@@ -1,11 +1,14 @@
-Template.defaultBeersList.onRendered(function () {
+Template.defaultBeersList.rendered = function () {
   $(document).ready(function(){
     $('ul.tabs').tabs();
   
   });
+  Session.set('formContext', 'allBeers')
+  var bryan = Session.get('formContext')
+  console.log(bryan)
 
         
-});
+};
 
 
 Template.defaultBeersList.onCreated(function(){
@@ -24,7 +27,7 @@ Template.defaultBeersList.helpers({
   },
   beerHeaderAfterSubmit: function() {
         var route = Router.current().route.getName()
-        console.log(route)
+
         if (route === 'newBeersList'){
             return 'active'
         } else {

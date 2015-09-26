@@ -20,7 +20,6 @@ Template.defaultBreweriesList.helpers({
   },
   breweryHeaderAfterSubmit: function() {
         var route = Router.current().route.getName()
-        console.log(route)
         if (route === 'recentlyAddedBreweries'){
             return 'active'
         } else {

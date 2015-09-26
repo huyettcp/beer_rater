@@ -1,0 +1,23 @@
+<template name="errors">
+  <div class="errors">
+    {{#each errors}}
+      {{> error}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="error">
+	<div class="container">
+  		<div class="row" role="alert">
+  			<div class="col s12">
+  				<div class="card red lighten-2">
+  				<div class="card-content white-text">
+  					<span class="card-title">{{message}}</span>
+
+  		 		</div>
+  			</div>
+  			</div>
+
+  		</div>
+  	</div>
+</template>

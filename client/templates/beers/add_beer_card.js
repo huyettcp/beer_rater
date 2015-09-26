@@ -36,5 +36,7 @@ Template.addBeerCard.events({
 				alert("We already have this beer")
 		});
 
+		Router.go('newBeersList')
+
 	}
 })

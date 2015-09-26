@@ -7,8 +7,8 @@
 
 		{{else}}
 		 {{#if currentUser}}
-		 <div class="col s12 waves-effect waves-light ">
-          <div class="card create_big_button col s12 hoverable create_big_button grey-text text-lighten-5">
+		 <div class="col s12">
+          <div class="card create_big_button col s12 hoverable create_big_button grey-text text-lighten-5 waves-effect waves-light ">
             <div class="card-content grey-text text-lighten-5" id="create_brewery">
               <span class="card-title grey-text text-lighten-5">Add Brewery</span>
                  <ul class="right">
@@ -27,8 +27,8 @@
 				</div>
     <div class="col s6 m4 right brewery_sort_tab ">
       <ul class="tabs blue-grey lighten-5">
-        <li class="tab col s2 m6"><a class="active" href="#" id="brewery_sort_alpha">A-Z</a></li>
-  		<li class="tab col s10 m6 custom_tabs"><a href="#" class="custom_tabs" id="brewery_sort_submitted">Submitted</a></li>
+        <li class="tab col s2 m6"><a class="" href="#" id="brewery_sort_alpha">A-Z</a></li>
+  		<li class="tab col s10 m6 custom_tabs"><a href="#" class="custom_tabs {{breweryHeaderAfterSubmit}}" id="brewery_sort_submitted">New</a></li>
       </ul>
   </div>
 			</div>

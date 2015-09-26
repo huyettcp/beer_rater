@@ -24,7 +24,7 @@ Template.editBeerCard.events({
 			if (error) {
 				throwError(error.reason);
 			} else {
-				// Router.go("breweryPage", {_id: currentBreweryId});
+
 		
 			}
 		});

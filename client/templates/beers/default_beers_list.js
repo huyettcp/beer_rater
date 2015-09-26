@@ -21,6 +21,16 @@ Template.defaultBeersList.helpers({
   },
   editingABeer: function() {
   	return Template.instance().editingABeer.get()
+  },
+  beerHeaderAfterSubmit: function() {
+        var route = Router.current().route.getName()
+        console.log(route)
+        if (route === 'newBeersList'){
+            return 'active'
+        } else {
+          
+        }
+
   }
 });
 

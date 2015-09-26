@@ -23,7 +23,11 @@ Template.addBreweryCard.events({
 
 			if (result.breweryExists)
 				alert("We already have this brewery");
+				Router.go('allBreweryBeers', {_id: result._id})
+
+
 		});
-		// Router.go('recentlyAddedBreweries')
+
+		Router.go('recentlyAddedBreweries')
 	}
 });

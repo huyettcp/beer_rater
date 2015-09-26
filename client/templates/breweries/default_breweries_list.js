@@ -17,7 +17,18 @@ Template.defaultBreweriesList.helpers({
   },
   editingABrewery: function(){
   	return Template.instance().editingABrewery.get();
+  },
+  breweryHeaderAfterSubmit: function() {
+        var route = Router.current().route.getName()
+        console.log(route)
+        if (route === 'recentlyAddedBreweries'){
+            return 'active'
+        } else {
+          
+        }
+
   }
+
 
 });
 
@@ -39,7 +50,6 @@ Template.defaultBreweriesList.events({
   },
   'click #brewery_sort_alpha': function() {
     Router.go('home')
-       console.log("workbs")
   }
 
 

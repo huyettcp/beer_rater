@@ -1,7 +1,7 @@
 Template.addBeerCard.helpers({
 	breweries: function() {
 		return Breweries.find();
-	},
+	}
 
 });
 

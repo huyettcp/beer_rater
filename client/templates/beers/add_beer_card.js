@@ -14,7 +14,10 @@ Template.addBeerCard.helpers({
 	} else {
 		return false
 	}
-}
+	},
+	breweries: function() {
+		return Breweries.find();
+	}
 })
 
 Template.addBeerCard.events({
@@ -47,7 +50,41 @@ Template.addBeerCard.events({
 			if (result.beerExists)
 				alert("We already have this beer")
 		});
-		Router.go('newBeersList')
+		var context = Session.get('formContext')
+		console.log(context)
+
+		if (context == "allBreweryBeers") {
+			  $('#modal1').closeModal();
+
+		} else {
+			Router.go("newBeersList")
+			$('#modal1').closeModal();
+		}
 
 	}
-})
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

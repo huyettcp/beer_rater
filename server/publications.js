@@ -22,7 +22,7 @@ Meteor.publish('beer_breweries_list', function() {
 });
 
 Meteor.publish('all_beers_for_brewery', function() {
-	return Beers.find()
+	return Beers.find();
 });
 
 

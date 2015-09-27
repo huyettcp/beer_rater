@@ -4,8 +4,7 @@ Template.defaultBeersList.rendered = function () {
   
   });
   Session.set('formContext', 'allBeers')
-  var bryan = Session.get('formContext')
-  console.log(bryan)
+
 
         
 };
@@ -18,6 +17,10 @@ Template.defaultBeersList.onCreated(function(){
 });
 
 Template.defaultBeersList.helpers({
+    breweries: function() {
+      return Breweries.find()
+  },
+
 
   addingABeer: function(){
   	return Template.instance().addingABeer.get()

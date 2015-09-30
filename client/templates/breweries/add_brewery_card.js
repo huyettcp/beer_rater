@@ -24,9 +24,11 @@ Template.addBreweryCard.events({
 
 			if (result.emptyBreweryName)
 				throwError('You must enter a Brewery Name')
+			
+	
 
 			if (result.breweryExists)
-				throwError('This link has already been posted');
+				throwError('This brewery has already been created');
 				Router.go('allBreweryBeers', {_id: result._id})
 
 

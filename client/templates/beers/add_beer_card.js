@@ -47,8 +47,12 @@ Template.addBeerCard.events({
 		Meteor.call('beerInsert', beer, function(error, result) {
 			if (error)
 				return alert(error.reason)
+			if (result.emptyBeerName)
+				throwError('You must enter a Beer Name')
+			if (result.noBrewerySelected)
+				throwError('You must select a brewery')
 			if (result.beerExists)
-				alert("We already have this beer")
+				throwError("We already have this beer")
 		});
 		var context = Session.get('formContext')
 		console.log(context)

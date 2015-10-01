@@ -14,16 +14,16 @@
                   <b>Type of Beer:</b> {{type_of_beer}}<br>
                   <b>ABV:</b> {{abv}}<br>
                   <b>Year Introducted:</b> {{year_introduced}}<br>
-                  <b>Number of Reviews:</b> {{beerReviewCount}}<br>
                   <b>Average Review Score:</b> {{averageReviewScore}}<br>
                   {{_id}}
                 </p>
               </div>
             </div>
-            <div class="card-action">
-                <a href="{{pathFor 'allBeerReviews'}}" id="all_beer_reviews" class="list_title blue-grey-text text-darken-4">Reviews</a>
-                {{#if ownBeer}}<a class="blue-grey-text text-darken-4" id="enter_edit_beer">Edit</a>{{/if}}
-                {{#if currentUser}}<a href="{{pathFor 'beerReviewCard'}}" class="blue-grey-text text-darken-4" >Add Review</a>{{/if}}
+            <div class="card-action col s12">
+                <a href="{{pathFor 'allBeerReviews'}}" id="all_beer_reviews" class="list_title blue-grey-text text-darken-4">Reviews ({{beerReviewCount}})</a>
+                {{#if currentUser}}<a href="{{pathFor 'beerReviewCard'}}" class="blue-grey-text text-darken-4 float_right_buttons" id="add_review">Add Review</a>{{/if}}
+                {{#if ownBeer}}<a class="blue-grey-text text-darken-4 float_right_buttons" id="enter_edit_beer">Edit</a>{{/if}}
+            
   
             </div>
           </div>

@@ -18,6 +18,7 @@ Template.addBeerCard.helpers({
 	breweries: function() {
 		return Breweries.find();
 	}
+
 })
 
 Template.addBeerCard.events({
@@ -33,6 +34,8 @@ Template.addBeerCard.events({
 		var beer_name = upper_case_beer_name.toProperCase();
 
 		var breweryId = $(e.target).find("select[name=brewery_id_dropdown]").val()
+
+		console.log(breweryId)
 
 		var beer = {
 			beer_name: beer_name,

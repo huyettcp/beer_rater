@@ -4,22 +4,22 @@
         <div class="col s12 card-content grey-text text-lighten-5">
         <h6 class="col s12"><b>Add Brewery</b></h6>
         <div class="input-field col s12 form-group {{errorClass 'brewery_name'}}">
-          <label for="brewery_name">Brewery Name</label>
+          <label for="brewery_name">Brewery Name <span class="form_error">{{errorMessage 'brewery_name'}}</span></label>
           <input id="brewery_name" type="text" class="validate" style="text-transform: capitalize">
-          <span class="help-block">{{errorMessage 'brewery_name'}}</span>
+
         </div>
 
-        <div class="input-field col s10 {{errorClass 'city'}}">
-          <label for="city">City</label>
+        <div class="input-field col s9 {{errorClass 'city'}}">
+          <label for="city">City <span class="form_error">{{errorMessage 'city'}}</span></label>
           <input id="city" type="text" class="validate" style="text-transform: capitalize">
-              <span class="help-block">{{errorMessage 'city'}}</span>
+
         </div>
 
-        <div class="input-field col s2 input-field col s10 {{errorClass 'city'}}">
-          <label for="state">State</label>
+        <div class="input-field col s3 input-field {{errorClass 'city'}}">
+          <label for="state">State <span class="form_error">{{errorMessage 'state'}}</span></label>
           <input id="state" type="text" class="validate" style="text-transform: uppercase" maxlength="2">
-          <span class="help-block">{{errorMessage 'state'}}</span>
         </div>
+  
         <div class="col s12">
         <input type="submit" value="Submit" class="btn blue-grey darken-4 btn-primary create_and_edit_form_button grey-text text-lighten-5 float_right_buttons"/>
         <a class="waves-effect waves-red btn-flat grey-text text-lighten-5 float_right_buttons" id="cancel_add_brewery">Cancel</a>

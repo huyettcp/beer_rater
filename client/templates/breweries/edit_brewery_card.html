@@ -17,10 +17,12 @@
           <label for="state" class="active">State</label>
           <input placeholder="{{state}}" id="update_state" type="text" value="{{state}}">
         </div>
-        <div class="col s12">
-        <input type="submit" value="Submit" class="btn btn-primary waves-effect waves-light blue-grey darken-4"/>
-        <a class="waves-effect waves-light btn blue-grey darken-4" id="cancel_edit_brewery">Cancel</a>
-        <a class="waves-effect waves-light btn red lighten-2" id="delete_brewery">Delete</a>
+            <div class="col s6">
+         <a class="waves-effect waves-light btn red lighten-2" id="delete_brewery">Delete</a>
+          </div>
+        <div class="col s6">
+        <input type="submit" value="Submit" class="btn btn-primary waves-effect waves-light blue-grey darken-4 float_right_buttons"/>
+        <a class="waves-effect waves-red btn-flat grey-text text-lighten-5 float_right_buttons" id="cancel_edit_brewery">Cancel</a>
         </div>
         </div>
       </div>

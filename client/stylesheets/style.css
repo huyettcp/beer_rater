@@ -138,11 +138,13 @@ h4, h5, p {
 }
 
 #add_bb {
-	margin-top: 1.14rem;
+	margin-top: 1.25rem;
+
 }
 
-
-
+.float_right_buttons {
+	float: right;
+}
 
 
 

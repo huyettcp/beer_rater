@@ -1,3 +1,16 @@
+Template.addBreweryCard.onCreated(function() {
+  Session.set('brewerySubmitErrors', {});
+});
+Template.addBreweryCard.helpers({
+  errorMessage: function(field) {
+    return Session.get('brewerySubmitErrors')[field];
+  },
+  errorClass: function (field) {
+    return !!Session.get('brewerySubmitErrors')[field] ? 'has-error' : '';
+  }
+});
+
+
 Template.addBreweryCard.events({
 	'submit form[name="add_brewery_form"]': function(e, template) {
 		e.preventDefault();
@@ -16,6 +29,14 @@ Template.addBreweryCard.events({
 			state: $(e.target).find('[id=state]').val()
 
 		};
+
+		var errors = validateBrewery(brewery);
+    		if (errors.brewery_name)
+      			return Session.set('brewerySubmitErrors', errors);
+      		if (errors.city)
+      			return Session.set('brewerySubmitErrors', errors);
+      		if (errors.state)
+      			return Session.set('brewerySubmitErrors', errors);
 		
 		Meteor.call('breweryInsert', brewery, function(error, result) {
 			if (error)
@@ -38,5 +59,6 @@ Template.addBreweryCard.events({
 		});
 
 		Router.go('recentlyAddedBreweries')
+		Session.set('breweryCleared', true);
 	}
 });

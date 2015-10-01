@@ -2,6 +2,7 @@ Template.defaultBreweriesList.onRendered(function () {
   $(document).ready(function(){
     $('ul.tabs').tabs();
   });
+  Session.set('breweryCleared', false);
         
 });
 
@@ -34,12 +35,17 @@ Template.defaultBreweriesList.helpers({
 Template.defaultBreweriesList.events({
 	'click #create_brewery': function(e, template) {
 		template.addingABrewery.set(true);
+    console.log(Session.get('breweryCleared'));
 	},
 	'click #cancel_add_brewery': function(e, template) {
 		template.addingABrewery.set(false);
 	},
 	'submit form': function(e, template) {
-		template.addingABrewery.set(false);
+      var cleared = Session.get('breweryCleared');
+      if (cleared === true) {
+          template.addingABrewery.set(false);
+      }
+
 
 	},
   'click #brewery_sort_submitted': function() {

@@ -14,7 +14,7 @@ Template.allBreweryBeers.helpers({
 
 Template.allBreweryBeers.events({
 	'click .jump_to_review': function() {
-		beerIdForRouter = this._id
+		var beerIdForRouter = this._id
 		Session.set('beerIdForRouter', beerIdForRouter)
 	}
 });

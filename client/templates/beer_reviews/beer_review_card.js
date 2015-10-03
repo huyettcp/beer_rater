@@ -1,11 +1,8 @@
 Template.beerReviewCard.rendered = function() {
-	Session.get('beerIdForRouter')
+
 
 };
 
-Template.beerReviewCard.helpers({
-
-});
 
 Template.beerReviewCard.events({
 	'click #cancel_add_review': function() {
@@ -42,13 +39,13 @@ Template.beerReviewCard.events({
 		};
 		e.target.reset();
 
-		var status = Session.get('beerIdForRouter')
+		var beerIdForRouter = Session.get('beerIdForRouter')
 		Meteor.call('beerCommentInsert', beer_review, function(error, result) {
 			if (error)
 				return error
 			else
 				Router.go('allBeerReviews', {_id: beerIdForRouter})
-				
+
 		});
 
 

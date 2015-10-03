@@ -35,6 +35,7 @@ Template.beerCard.helpers({
 Template.beerCard.events({
 	'click #enter_edit_beer': function(e, template) {
 		template.editingABeer.set(true);
+
 	},
 	'click #cancel_edit_beer': function(e, template) {
 		template.editingABeer.set(false);
@@ -49,8 +50,10 @@ Template.beerCard.events({
 			var currentBeerId = this._id;
 			Beers.remove(currentBeerId);
 		};
-
-
+	},
+	'click #add_review': function() {
+		beerIdForRouter = this._id
+		Session.set('beerIdForRouter', beerIdForRouter)
 	}
 
 })

@@ -1,5 +1,5 @@
 Template.beerReviewCard.rendered = function() {
-	var context = Session.get('formContext')
+	Session.get('beerIdForRouter')
 
 };
 
@@ -42,14 +42,21 @@ Template.beerReviewCard.events({
 		};
 		e.target.reset();
 
-
-
+		var status = Session.get('beerIdForRouter')
 		Meteor.call('beerCommentInsert', beer_review, function(error, result) {
 			if (error)
 				return error
 			else
-				Router.go("defaultBeersList")
+				Router.go('allBeerReviews', {_id: beerIdForRouter})
 		});
+
+
+		
 	}
 
 });
+
+
+
+
+

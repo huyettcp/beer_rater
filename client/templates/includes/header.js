@@ -29,7 +29,7 @@ Template.header.helpers({
 		var route = Router.current().route.getName()
 		if (route === 'home' || route === 'allBreweryBeers' || route === 'recentlyAddedBreweries'){
 			return 'active' ;
-		}	else  {
+		} else {
 
 		}
 	}

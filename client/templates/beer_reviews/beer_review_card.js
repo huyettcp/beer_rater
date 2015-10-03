@@ -48,6 +48,7 @@ Template.beerReviewCard.events({
 				return error
 			else
 				Router.go('allBeerReviews', {_id: beerIdForRouter})
+				
 		});
 
 

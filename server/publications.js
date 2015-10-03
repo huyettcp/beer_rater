@@ -21,8 +21,11 @@ Meteor.publish('beer_breweries_list', function() {
 	return Breweries.find();
 });
 
-Meteor.publish('all_beers_for_brewery', function() {
-	return Beers.find();
+Meteor.publish('all_beers_for_brewery', function(options) {
+	check(options, {
+		sort: Object
+	})
+	return Beers.find({}, options);
 });
 
 

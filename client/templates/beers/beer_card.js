@@ -31,7 +31,11 @@ Template.beerCard.helpers({
 			total += rating_array[i]
 		}
 		var avg = total/rating_array.length
-		return avg
+		if (avg > 0) {
+			return avg
+		} else {
+			return "No reviews yet"
+		}
 	}
 });
 

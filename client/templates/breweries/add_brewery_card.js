@@ -1,6 +1,7 @@
 Template.addBreweryCard.onCreated(function() {
   Session.set('brewerySubmitErrors', {});
 });
+
 Template.addBreweryCard.helpers({
   errorMessage: function(field) {
     return Session.get('brewerySubmitErrors')[field];

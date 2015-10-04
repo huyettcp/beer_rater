@@ -5,19 +5,29 @@ Template.addBeerCard.rendered = function () {
 
 };
 
+Template.addBeerCard.onCreated(function() {
+  Session.set('beerSubmitErrors', {});
+});
+
 Template.addBeerCard.helpers({
 	onBreweryBeerList: function(){
-	var context = Session.get('formContext')
+		var context = Session.get('formContext')
 
-	if (context == "allBreweryBeers"){
-		return true
-	} else {
-		return false
-	}
+		if (context == "allBreweryBeers"){
+			return true
+		} else {
+			return false
+		}
 	},
 	breweries: function() {
 		return Breweries.find();
-	}
+	},
+	errorMessage: function(field) {
+    	return Session.get('beerSubmitErrors')[field];
+  	},
+  	errorClass: function (field) {
+    	return !!Session.get('beerSubmitErrors')[field] ? 'has-error' : '';
+  	}
 
 })
 
@@ -44,7 +54,11 @@ Template.addBeerCard.events({
 			year_introduced: $(e.target).find('[id=year_introduced]').val(),
 			breweryId: breweryId
 
-		}
+		};
+
+		var errors = validateBeer(beer);
+		if (errors.beer_name)
+			return Session.set('beerSubmitErrors', errors)
 
 		e.target.reset();
 		Meteor.call('beerInsert', beer, function(error, result) {
@@ -62,10 +76,12 @@ Template.addBeerCard.events({
 
 		if (context == "allBreweryBeers") {
 			  $('#modal1').closeModal();
+			  Session.set('beerCleared', true);
 
 		} else {
 			Router.go("newBeersList")
 			$('#modal1').closeModal();
+			Session.set('beerCleared', true);
 		}
 
 	}

@@ -35,10 +35,11 @@ Template.defaultBreweriesList.helpers({
 Template.defaultBreweriesList.events({
 	'click #create_brewery': function(e, template) {
 		template.addingABrewery.set(true);
-    console.log(Session.get('breweryCleared'));
+    Session.set('breweryCleared', false);
 	},
 	'click #cancel_add_brewery': function(e, template) {
 		template.addingABrewery.set(false);
+    Session.set('breweryCleared', false);
 	},
 	'submit form': function(e, template) {
       var cleared = Session.get('breweryCleared');

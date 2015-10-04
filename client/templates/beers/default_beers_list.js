@@ -4,6 +4,7 @@ Template.defaultBeersList.rendered = function () {
   
   });
   Session.set('formContext', 'allBeers')
+  Session.set('beerCleared', false);
 
 
         
@@ -38,12 +39,19 @@ Template.defaultBeersList.helpers({
 Template.defaultBeersList.events({
 	'click #create_beer': function(e, template) {
 		template.addingABeer.set(true);
+    Session.set('beerCleared', false);
+
 	},
 	'click #cancel_add_beer': function(e, template) {
 		template.addingABeer.set(false);
+    Session.set('beerCleared', false);
+
 	},
 	'submit form': function(e, template) {
-		template.addingABeer.set(false);
+    var cleared = Session.get('beerCleared');
+    if (cleared === true) {
+		  template.addingABeer.set(false);
+    } 
 		template.editingABeer.set(false);
 	},
 	'click #beer_sort_alpha':function() {

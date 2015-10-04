@@ -3,6 +3,6 @@
             <td><a href="{{pathFor 'allBeerReviews'}}">{{beer_name}} {{_id}}</a></td>
             <td>{{type_of_beer}}</td>
             <td>{{averageReviewScore}}</td>
-            <td><a href="{{pathFor 'beerReviewCard'}}" class="jump_to_review">Review</a></td>
+            {{#if currentUser}}<td><a href="{{pathFor 'beerReviewCard'}}" class="jump_to_review">Review</a></td>{{/if}}
           </tr>
 </template>

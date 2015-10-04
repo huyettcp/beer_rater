@@ -1,5 +1,5 @@
 <template name="editBeerCard">
-  <form class="col s12" name="edit_beer">
+  <form class="col s12 m6 l6" name="edit_beer">
       <div class="card blue-grey darken-1">
         <div class="col s12 card-content white-text">
         <h6 class="col s12 cancel_add_brew"><b>Edit {{brewery_name}}</b></h6>
@@ -8,7 +8,7 @@
           <input placeholder="{{beer_name}}" id="update_beer_name" type="text" value="{{beer_name}}">
         </div>
 
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <label for="type_of_beer" class="active">Type of Beer</label>
           <input placeholder="{{type_of_beer}}" id="update_type_of_beer" type="text" value="{{type_of_beer}}">
         </div>
@@ -21,13 +21,16 @@
           <label for="year_introduced" class="active">Year Introduced</label>
           <input placeholder="{{year_introduced}}" id="update_year_introduced" type="text" value="{{year_introduced}}">
         </div>
-        <div class="col s12">
-        <input type="submit" value="Submit" class="btn btn-primary waves-effect waves-light blue-grey darken-4"/>
-        <a class="waves-effect waves-light btn blue-grey darken-4" id="cancel_edit_beer">Cancel</a>
-        <a href="#" class="waves-effect waves-light btn red lighten-2" id="delete_beer">Delete</a>
+        <div class="col s3">
+                  <a href="#" class="waves-effect waves-light btn red lighten-2 white-text" id="delete_beer">Delete</a>
+        </div>
+
+        <div class="col s9">
+        <input type="submit" value="Submit" class="btn btn-primary waves-effect waves-light blue-grey darken-4 float_right_buttons"/>
+        <a class="waves-effect waves-red btn-flat grey-text text-lighten-5 float_right_buttons" id="cancel_edit_beer">Cancel</a>
         </div>
         </div>
+
       </div>
     </form>
-
 </template>

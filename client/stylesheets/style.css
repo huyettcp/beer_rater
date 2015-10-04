@@ -148,10 +148,11 @@ h4, h5, p {
 
 .form_error {
 	color: #e57373;
+	
 }
 
 #add_review {
-	margin-right: 0px
+	margin-right: 0px;
 }
 
 

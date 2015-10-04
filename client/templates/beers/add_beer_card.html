@@ -66,14 +66,14 @@
           <label for="year_introduced">Year Introduced</label>
           <input id="year_introduced" type="text" class="validate" style="text-transform: capitalize">
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s6 form-group {{errorClass 'brewery_id_dropdown'}}">
     		<select class="browser-default dropdown_text_color" name="brewery_id_dropdown">
     			<option value="" disabled selected>Brewery Select</option>
           {{#each breweries}}
               <option value="{{_id}}">{{brewery_name}}</option>
           {{/each}}
     		</select>
-
+        <span class="form_error">{{errorMessage 'brewery_id_dropdown'}}</span>
         </div>
         <div class="col s12">
         <input type="submit" value="Submit" class="btn btn-primary blue-grey darken-4 create_and_edit_form_button float_right_buttons"/>

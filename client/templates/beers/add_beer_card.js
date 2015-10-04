@@ -59,6 +59,8 @@ Template.addBeerCard.events({
 		var errors = validateBeer(beer);
 		if (errors.beer_name)
 			return Session.set('beerSubmitErrors', errors)
+		if (errors.brewery_id_dropdown)
+			return Session.set('beerSubmitErrors', errors)
 
 		e.target.reset();
 		Meteor.call('beerInsert', beer, function(error, result) {
